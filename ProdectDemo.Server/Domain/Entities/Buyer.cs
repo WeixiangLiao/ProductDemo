@@ -1,0 +1,10 @@
+﻿namespace ProductDemo.Server.Domain.Entities
+{
+    public class Buyer
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+
+        public string Email { get; set; } = string.Empty;
+    }
+}
