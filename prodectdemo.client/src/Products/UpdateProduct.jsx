@@ -34,7 +34,8 @@ const UpdateProduct = () => {
                     sku: oldProduct.sku,
                     title: oldProduct.title,
                     description: oldProduct.description,
-                    buyerId: oldProduct.buyerId
+                    buyerId: oldProduct.buyerId,
+                    active: oldProduct.active
                 }}
                 validationSchema={Yup.object({
                     sku: Yup.string()
@@ -87,6 +88,10 @@ const UpdateProduct = () => {
                                 ))}
                             </Field>
                             <ErrorMessage name="buyerId" component="div" className="text-danger" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="active">Active</label>
+                            <Field type="checkbox" id="active" name="active" className="form-control" />
                         </div>
                         <button type="submit" className="btn btn-primary" disabled={formik.isSubmitting}>Update</button>
                     </Form>

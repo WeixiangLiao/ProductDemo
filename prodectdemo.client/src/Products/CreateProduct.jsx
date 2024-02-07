@@ -24,7 +24,7 @@ const CreateProduct = () => {
                     title: '',
                     description: '',
                     buyerId: '',
-                    active: false // Initialize the "active" field with false
+                    active: false 
                 }}
                 validationSchema={Yup.object({
                     sku: Yup.string()
